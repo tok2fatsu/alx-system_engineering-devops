@@ -1,29 +1,31 @@
-#Command Challenge
-###Solutions
-
+====================================
+# Command Challenge
+====================================
+### Solutions
+-----------------------------------------
 
 Level 1 : print "hello world"
 
 echo "hello world"
-
+-----------------------------------------
 
 
 Level 2 : Print the current working directory.
 
 pwd
-
+-----------------------------------------
 
 
 Level 3 : List names of all the files in the current directory, one file per line.
 
 ls
-
+--------------------------------------------
 
 
 Level 4 : There is a file named access.log in the current directory. Print the contents.
 
 cat access.log
-
+-------------------------------------------
 
 
 Level 5 : Print the last 5 lines of "access.log".

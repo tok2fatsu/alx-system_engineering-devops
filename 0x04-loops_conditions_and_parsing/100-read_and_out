@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# a bash script to display Username, UserId and Home directory
+
+file="/etc/passwd"
+while read -r LINE;
+do
+	echo "$LINE" | cut -d ":" -f1,3,6
+done < $file;

@@ -1,1 +1,3 @@
-Learning shell basics
+### `SSH`
+#### Languages used
+* `bash`

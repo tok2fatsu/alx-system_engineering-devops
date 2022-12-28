@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# connects to a server using ssh
+# uses the -i flag to force ssh to use the key specifed in the path
+
+ssh -i ~/.ssh/school ubuntu@100.25.200.232

@@ -32,22 +32,11 @@ defaults
 	errorfile 502 /etc/haproxy/errors/502.http
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
-
-# start of parameters for tok2fatsu.tech
-frontend tok2fatsu.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 tok2fatsu.tech-backend
-
-
-frontend  tok2fatsu.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/tok2fatsu.tech.pem
-	http-request set-header X-Forwarded-Proto https
-        default_backend tok2fatsu.tech-backend
-
-
-backend tok2fatsu.tech-backend
-        balance roundrobin
-        server 57689-web-01 100.25.196.225:80 check
-        server 57689-web-02 54.90.44.249:80 check
-# end of parameters
+frontend web_frontend
+	bind *:80
+	mode http
+	default_backend web_backend
+backend web_backend
+	balance roundrobin
+	server 57689-web-01 100.25.196.225:80 check
+	server 57689-web-02 54.90.44.249:80 check

@@ -14,7 +14,7 @@ API = "https://jsonplaceholder.typicode.com"
 if __name__ == '__main--':
     if len(sys.argv) > 1:
         if re.fullmatch(r'\d+', sys.argv[1]):
-            id =int(sys.argv[1])
+            id = int(sys.argv[1])
             user_res = requests.get('{}/users/{}'.format(API, id)).json()
             todos_res = requests.get('{}/todos'.format(API)).json()
             user_name = user_res.get('name')

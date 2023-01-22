@@ -40,3 +40,11 @@ backend web_backend
 	balance roundrobin
 	server 57689-web-01 100.25.196.225:80 check
 	server 57689-web-02 54.90.44.249:80 check
+frontend web_frontend
+	bind *:80
+	mode http
+	default_backend web_backend
+backend web_backend
+	balance roundrobin
+	server 57689-web-01 100.25.196.225:80 check
+	server 57689-web-02 54.90.44.249:80 check

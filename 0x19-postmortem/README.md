@@ -1,3 +1,5 @@
+<img src=./image.png width=750%>
+
 ### Forecast requests faliure report
 On all queries made on the platform routes, the `Forecast` platform was reportedly returning 500 Errors last week, and all of the services were unavailable. 85% of users were impacted. The failure of our master server web-01 was the primary factor.
 

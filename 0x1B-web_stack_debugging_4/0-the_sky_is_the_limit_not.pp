@@ -1,6 +1,6 @@
-# fixes bad php extentions
+# fixes Number of failed requests
 
-exec { 'fix-wordpress':
-  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin/:/bin/'
+exec { 'fix--for-nginx':
+  command => "sed -i 's/worker_processes 4;/worker_processes 7;/g' /etc/nginx/nginx.conf; sudo service nginx restart",
+  path    => ['/bin', '/usr/bin', '/usr/sbin']
 }
